@@ -70,14 +70,14 @@ else:
 plt.plot(steering)
 plt.xlabel('Data'); plt.ylabel('Steering'); plt.title('Steering Input')
 plt.savefig(fname+'.steering.png')
-plt.show()
+#plt.show()
 
 str_hist, str_hist_bins = np.histogram(steering, bins = np.linspace(-1.05,1.05,20))
 plt.hist(steering,bins=np.linspace(-1.05,1.05,20), edgecolor='k', alpha = 0.5, color= 'b')
 plt.xlabel('Steering Input'); plt.ylabel('Count'); plt.title('Steering Training Data Histogram')
 plt.grid(True)
 plt.savefig(fname+'.histogram.png')
-plt.show()
+#plt.show()
 
 
 samples =list(zip(imagesfn,steering))
