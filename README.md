@@ -1,8 +1,8 @@
-> **Self-Driving Car Engineer Nanodegree - Deep Learning**
+# **Self-Driving Car Engineer Nanodegree - Deep Learning** #
 >
-> **Project3: Behavioral Cloning**
+# **Project3: Behavioral Cloning** #
 
-**MODEL ARCHITECTURE**
+## **MODEL ARCHITECTURE** ##
 
 The basic model architecture was taken from the NVIDIA paper. The NVIDIA
 model was able to correctly predict steering angle on a real driving
@@ -25,7 +25,7 @@ The model was built using Keras. Outputting a summary on Keras \[lines
 
 The CNN architecture ends up having 348,219 parameters.
 
-**REDUCE OVERFITTING**
+## **REDUCE OVERFITTING** ##
 
 The images were divided into training and validation using sklearn, 80%
 and 20% respectively. \[line 85\]
@@ -34,7 +34,7 @@ All the convolution layers have Rectifier linear units (ReLUs) to create
 nonlinearity. In between the convolution and the fully connected layers
 there is a dropout to reduce overfitting. \[line 135\]
 
-**MODEL PARAMETERS**
+## **MODEL PARAMETERS** ##
 
 The Adam optimizer was specified, therefore there is no need of
 specifying the learning rate. \[line 141\]
@@ -43,7 +43,7 @@ specifying the learning rate. \[line 141\]
 
 <span id="page3" class="anchor"></span>
 
-> **TRAINING DATA**
+## **TRAINING DATA** ##
 >
 > The objective of the datasets was to provide imagery data that will
 > keep the car on the track. The datasets used were screenshots of the
@@ -100,7 +100,7 @@ specifying the learning rate. \[line 141\]
                                                     
   ------------------------------------------------- -------------------------
 
-**IMAGE PROCESSING**
+## **IMAGE PROCESSING** ##
 
 The image data is normalized inside the Keras model by using a Lambda
 function. (lambda x: x/255.0 - 0.5) \[line 126\]. The distribution then
@@ -119,7 +119,7 @@ A histogram equalizer using CV2 was attempted, but it did not make a
 difference on track1, so it was taken out. This was implemented at the
 generator level, but taken out.
 
-**DATA AUGMENTATION**
+## **DATA AUGMENTATION** ##
 
 Data augmentation was performed because it was not possible to train the
 car to drive correctly with the obtained datasets.
@@ -142,7 +142,7 @@ for this model/dataset. It was also my decision not to use it, since
 most road images are not symmetric (i.e. you drive on the right side of
 the road). I decided not to flip L/R to keep the model more realistic.
 
-**GENERATOR**
+## **GENERATOR** ##
 
 The generator was implemented as a function. \[lines 87-104\]
 
@@ -160,12 +160,12 @@ stable on the track. \[line 147\]
 
 ![](./media/image6.jpeg)
 
-**SIMULATION**
+## **SIMULATION** ##
 
 After performing the training, and using the model.h5 on the car
 simulator, the car could drive autonomous around the track1 non-stop.
 
-**COMMENTS**
+## **COMMENTS** ##
 
 -The car simulator was hardcoded on drive.py to drive around 9mph.
 Therefore, when collecting data, I tried to drive my car at around 9mph.
@@ -213,7 +213,7 @@ architecture did not do better than the NVIDIA for this project.
 -Things I did not try because I ran out of time were: deeper/shallower
 networks and batch normalization.
 
-**TRACK TWO**
+## **TRACK TWO** ##
 
 Data was collected on Track two going clockwise and counterclockwise.
 The speed was set at approximately 9mph also.
