@@ -2,6 +2,12 @@
 >
 # **Project3: Behavioral Cloning** #
 
+## **INSTRUCTIONS** ##
+
+1- git clone https://github.com/caudaz/carnd1-proj3
+
+2- run CarND-Behavioral-Cloning-P3-master_GitHub\model_v2.py
+
 ## **MODEL ARCHITECTURE** ##
 
 The basic model architecture was taken from the NVIDIA paper. The NVIDIA
